@@ -32,10 +32,16 @@ public abstract class FormatoA {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Column(unique = true,nullable = false)
     private int idFormatoA;
+
+    @Column(unique = true,length = 100)
     private String titulo;
+
     @Column(columnDefinition = "TEXT")
     private String objetivoGeneral;
+
     @Column(columnDefinition = "TEXT")
     private String objetivosEspecificos;
 

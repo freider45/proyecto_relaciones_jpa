@@ -2,6 +2,7 @@ package co.edu.unicauca.asae.proyecto_relaciones_jpa.models;
 
 import java.util.List;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -24,7 +25,10 @@ public class Rol {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Column(unique = true,nullable = false)
     private int idRol;
+
     private String roleAsignado;
 
     //Un rol tiene muchos historicos

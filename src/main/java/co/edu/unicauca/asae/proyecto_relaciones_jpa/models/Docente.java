@@ -3,6 +3,7 @@ package co.edu.unicauca.asae.proyecto_relaciones_jpa.models;
 
 import java.util.List;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -27,10 +28,19 @@ import lombok.Setter;
 public class Docente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Column(unique = true, nullable = false)
     private int idDocente;
+
+    @Column(nullable = false,name = "nombre",length = 45)
     private String nombresDocente;
+
+    @Column(nullable = false,name = "apellido",length = 45)
     private String apellidosDocente;
+
     private String nombreGrupo;
+
+    @Column(unique = true, nullable = false)
     private String correo;
 
     //Un docente puede tener muchos formatos A
