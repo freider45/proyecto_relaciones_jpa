@@ -32,10 +32,10 @@ public class Historico {
     //Muchos historicos pertenecen a un docente
     @ManyToOne
     @JoinColumn(name = "idFkDocente")
-    private Docente docente;
+    private Docente objDocente;
 
     //Muchos historicos pertenecen a un rol
     @ManyToOne
     @JoinColumn(name = "idFkRol")
-    private Rol rol;
+    private Rol objRol;
 }

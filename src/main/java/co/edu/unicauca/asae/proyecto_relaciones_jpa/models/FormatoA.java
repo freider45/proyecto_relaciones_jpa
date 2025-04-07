@@ -41,7 +41,7 @@ public abstract class FormatoA {
 
     // Un formato tiene un estado
     @OneToOne(mappedBy = "objFormatoA", cascade = CascadeType.ALL)
-    private Estado estado;
+    private Estado objEstado;
 
     //Muchos formatos A pertencen a un docente
     @ManyToOne

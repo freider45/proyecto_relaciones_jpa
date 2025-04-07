@@ -30,6 +30,6 @@ public class Estado {
     
     @OneToOne
     @JoinColumn(name = "idFkFormatoA")
-    private FormatoA formatoA;
+    private FormatoA objFormatoA;
 
 }

@@ -1,9 +1,7 @@
 package co.edu.unicauca.asae.proyecto_relaciones_jpa.models;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.PrimaryKeyJoinColumn;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,11 +14,8 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@PrimaryKeyJoinColumn(name = "idFormatoA")
 public class FormatoTIA extends FormatoA {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idFormatoTIA;
     private String nombreEstudiante1;
     private String nombreEstudiante2;
     
