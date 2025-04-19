@@ -1,9 +1,9 @@
 package co.edu.unicauca.asae.proyecto_relaciones_jpa.repositories;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import co.edu.unicauca.asae.proyecto_relaciones_jpa.models.FormatoTIA;
 
-public interface FormatoTIARepository extends CrudRepository<FormatoTIA,Integer> {
+public interface FormatosTIARepository extends JpaRepository<FormatoTIA,Integer> {
     
 }

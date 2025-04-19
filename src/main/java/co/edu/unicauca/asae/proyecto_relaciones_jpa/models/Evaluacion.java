@@ -1,8 +1,9 @@
 package co.edu.unicauca.asae.proyecto_relaciones_jpa.models;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.List;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -27,9 +28,13 @@ public class Evaluacion {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idObservacion;
-    private String observacion;
-    private Date fechaRegistro;
+    private int idEvaluacion;
+    @Column(name = "concepto", nullable = false, length = 255)
+    private String concepto;
+    @Column(name = "nombre_coordinador", nullable = false, length = 100)
+    private String nombreCoordinador;
+    @Column(name = "fecha_registro_concepto", nullable = false)
+    private Date fechaRegistroConcepto;
 
     //Muchas evaluaciones pertenecen a un formato A
     @ManyToOne

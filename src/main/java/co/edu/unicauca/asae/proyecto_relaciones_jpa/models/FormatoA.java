@@ -33,14 +33,15 @@ public abstract class FormatoA {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idFormatoA;
+    @Column(unique = true ,name = "titulo", nullable = false, length = 100)
     private String titulo;
-    @Column(columnDefinition = "TEXT")
+    @Column(name = "objetivo_general", nullable = false, columnDefinition = "TEXT")
     private String objetivoGeneral;
-    @Column(columnDefinition = "TEXT")
+    @Column(name = "objetivos_especificos", nullable = false, columnDefinition = "TEXT")
     private String objetivosEspecificos;
 
     // Un formato tiene un estado
-    @OneToOne(mappedBy = "objFormatoA", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "objFormatoA", cascade = CascadeType.PERSIST)
     private Estado objEstado;
 
     //Muchos formatos A pertencen a un docente
@@ -51,5 +52,11 @@ public abstract class FormatoA {
     //Un formato A puede tener muchas evaluaciones (maximo 3)
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "objFormatoA")
     private List<Evaluacion> evaluaciones;
+
+    public FormatoA(String titulo, String objetivoGeneral, String objetivosEspecificos) {
+        this.titulo = titulo;
+        this.objetivoGeneral = objetivoGeneral;
+        this.objetivosEspecificos = objetivosEspecificos;
+    }
     
 }

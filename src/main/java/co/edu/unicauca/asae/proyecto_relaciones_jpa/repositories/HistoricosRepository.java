@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import co.edu.unicauca.asae.proyecto_relaciones_jpa.models.Historico;
 
-public interface HistoricoRepository extends CrudRepository<Historico, Integer> {
+public interface HistoricosRepository extends CrudRepository<Historico, Integer> {
     
 }

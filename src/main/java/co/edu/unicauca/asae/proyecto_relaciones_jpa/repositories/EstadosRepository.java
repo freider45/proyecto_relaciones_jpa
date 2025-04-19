@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import co.edu.unicauca.asae.proyecto_relaciones_jpa.models.Estado;
 
-public interface EstadoRepository extends CrudRepository<Estado, Integer> {
+public interface EstadosRepository extends CrudRepository<Estado, Integer> {
     
 }
