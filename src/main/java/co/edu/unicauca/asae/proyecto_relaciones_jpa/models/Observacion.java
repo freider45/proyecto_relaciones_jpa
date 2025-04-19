@@ -28,6 +28,8 @@ public class Observacion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Column(unique = true, nullable = false)
     private int idObservacion;
     @Column(name = "observacion", nullable = true, columnDefinition = "TEXT")
     private String observacion;

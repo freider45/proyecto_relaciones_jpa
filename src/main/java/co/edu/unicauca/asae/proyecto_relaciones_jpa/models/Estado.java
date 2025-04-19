@@ -25,6 +25,8 @@ public class Estado {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Column(unique = true, nullable = false)
     private int idEstado;
     @Column(name = "estado_actual", nullable = false, length = 50)
     private String estadoActual;

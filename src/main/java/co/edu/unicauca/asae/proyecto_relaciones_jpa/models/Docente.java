@@ -28,6 +28,8 @@ import lombok.Setter;
 public class Docente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Column(unique = true, nullable = false)
     private int idDocente;
     @Column(name = "nombres_docente", nullable = false, length = 100)
     private String nombresDocente;

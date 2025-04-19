@@ -32,6 +32,8 @@ public abstract class FormatoA {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Column(unique = true,nullable = false)
     private int idFormatoA;
     @Column(unique = true ,name = "titulo", nullable = false, length = 100)
     private String titulo;

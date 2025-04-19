@@ -25,6 +25,8 @@ public class Rol {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Column(unique = true,nullable = false)
     private int idRol;
     @Column(name = "role_asignado", nullable = false, length = 100)
     private String roleAsignado;
